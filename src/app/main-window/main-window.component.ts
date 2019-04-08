@@ -15,7 +15,7 @@ export class MainWindowComponent implements OnInit {
   constructor(private  httpClient:  HttpClient) { }
 
   ngOnInit() {
-    const endpoint = 'http://localhost:8080/users';
+    const endpoint = 'users';
     this.httpClient.get<GetUserResponse>(endpoint).subscribe((response) => {
       this.users = response.result;
     });

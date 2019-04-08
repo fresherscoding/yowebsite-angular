@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthModule } from './auth/auth.module';
 import { AuthComponent } from './auth/auth.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { CreateWebsiteComponent } from './create-website/create-website.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomepageComponent,
+  },
+  {
+    path: 'sites',
+    component: CreateWebsiteComponent,
   },
 ];
 

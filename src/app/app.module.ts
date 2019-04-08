@@ -15,6 +15,9 @@ import { AuthModule } from './auth/auth.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './auth/token.interceptor';
 import { RightPaneComponent } from './right-pane/right-pane.component';
+import { environment } from '../environments/environment.prod';
+import { CreateWebsiteComponent } from './create-website/create-website.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { RightPaneComponent } from './right-pane/right-pane.component';
     LeftnavComponent,
     MainWindowComponent,
     MiddleSectionComponent,
-    RightPaneComponent
+    RightPaneComponent,
+    CreateWebsiteComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { RightPaneComponent } from './right-pane/right-pane.component';
     BrowserAnimationsModule,
     MaterialModule,
     MDBBootstrapModulesPro.forRoot(),
-    AuthModule
+    AuthModule,
+    ReactiveFormsModule
   ],
   providers: [
     MDBSpinningPreloader,
@@ -39,6 +44,10 @@ import { RightPaneComponent } from './right-pane/right-pane.component';
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
+    },
+    {
+      provide: 'BASE_API_URL',
+      useValue: environment.baseUrl
     }
   ],
   bootstrap: [AppComponent]

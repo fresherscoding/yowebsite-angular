@@ -12,7 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
-    "@angular/cdk": "~7.2.1",
+    "@angular/cdk": "^7.3.7",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
     "@angular/core": "~7.2.0",
@@ -24,6 +24,8 @@
     "@angular/router": "~7.2.0",
     "@fortawesome/fontawesome-free": "^5.7.0",
     "@types/chart.js": "^2.7.43",
+    "ajv": "^6.9.1",
+    "angular": "^1.7.8",
     "angular-bootstrap-md": "^7.3.0",
     "chart.js": "^2.5.0",
     "core-js": "^2.5.4",
@@ -31,7 +33,7 @@
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
-    "ng-uikit-pro-standard": "git+https://oauth2:2423zT3MtFqJxkryEVdE@git.mdbootstrap.com/mdb/angular/ng-uikit-pro-standard.git",
+    "ng-uikit-pro-standard": "git+https://oauth2:ynX5MsPG2UyBnuymKoxk@git.mdbootstrap.com/mdb/angular/ng-uikit-pro-standard.git",
     "popper": "^1.0.1",
     "popper.js": "^1.14.6",
     "rxjs": "~6.3.3",
@@ -40,7 +42,7 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.12.0",
+    "@angular-devkit/build-angular": "^0.12.4",
     "@angular/cli": "~7.2.1",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",

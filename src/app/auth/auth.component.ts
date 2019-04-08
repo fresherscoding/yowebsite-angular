@@ -55,7 +55,7 @@ export class AuthComponent implements OnInit {
   }
 
   private doLogin() {
-    const endpoint = 'http://localhost:8080/token/generate-token';
+    const endpoint = 'token/generate-token';
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -70,13 +70,17 @@ export class AuthComponent implements OnInit {
         this.authenticated = true;
         localStorage.setItem('token', response.result.token);
         localStorage.setItem('username', response.result.username);
-        this.mainRoute.navigate(['home']);
+        if (response.result.username === 'admin') {
+          this.mainRoute.navigate(['home']);
+        } else {
+          this.mainRoute.navigate(['sites']);
+        }
       }
     });
   }
 
   private register() {
-    const endpoint = 'http://localhost:8080/users/signup';
+    const endpoint = 'users/signup';
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
